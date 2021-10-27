@@ -10,7 +10,8 @@ async function getUser() {
 
     if (user) {
         document.querySelector("#empty").remove();
-        usernameElement=JSON.parse(user).userId;
+        const obj = JSON.parse(user);
+        usernameElement=obj.userId;
     }
 }
 
