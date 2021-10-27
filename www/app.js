@@ -12,7 +12,7 @@ async function getUser() {
         document.querySelector("#empty").remove();
         const obj = JSON.parse(user);
         //usernameElement=obj.userId;
-        document.getElementById("userName").innerHTML ="HELLO" + obj.userId;
+        document.getElementById("username").innerHTML ="HELLO" + obj.userId;
     }
 }
 
