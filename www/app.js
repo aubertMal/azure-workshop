@@ -9,7 +9,7 @@ async function getUser() {
     console.log(user);
 
     if (user) {
-        document.getElementById('username').innerHTML ='HELLO' + user.userId;
+        usernameElement.innerHTML ='HELLO ' + user.clientPrincipal.userDetails;
     }
 }
 
