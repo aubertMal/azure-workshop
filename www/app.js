@@ -4,7 +4,14 @@ const empty = document.querySelector('#empty');
 const usernameElement = document.querySelector('#username');
 
 async function getUser() {
-    // TODO
+    const response = await fetch('/.auth/me');
+    const user = await response.json();
+    console.log(user);
+
+    if (user) {
+        document.querySelector("#empty").remove();
+        usernameElement=JSON.parse(user).userId;
+    }
 }
 
 async function updateTask() {
